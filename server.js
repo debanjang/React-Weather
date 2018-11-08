@@ -19,5 +19,6 @@ app.use(express.static('public'));
 /*which port the server is running on
 the function to execute once the srver is up and running*/
 app.listen(PORT, function(){
+    console.log("Port: "+PORT);
     console.log('Express Server is up and running on port 3000');
 })
