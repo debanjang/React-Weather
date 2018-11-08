@@ -11,7 +11,10 @@ var React = require('React');
 //Since render is the only function, this component is a candidate for Stateless Functional Component
 var About = props =>{
   return(
-    <h3> About Component </h3>
+    <div>
+      <h3> About </h3>
+      <p> Welcome to the About page! </p>
+    </div>
   )
 }
 
