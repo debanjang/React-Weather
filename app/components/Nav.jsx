@@ -18,7 +18,7 @@ var Nav = props =>{
   return(
     <div>
       <h2> Nav Component </h2>
-      <IndexLink to="/" activeClass="active" activeStyle={{fontWeight:'bold'}}> Weather </IndexLink>
+      <IndexLink to="/" activeClass="active" activeStyle={{fontWeight:'bold'}}> Get Weather </IndexLink>
       <Link to="/about" aciveClass="active" activeStyle={{fontWeight:'bold'}}> About </Link>
       <Link to = "/example" activeClass="active" activeStyle={{fontWeight:'bold'}}> Example </Link>
     </div>

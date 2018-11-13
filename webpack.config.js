@@ -1,5 +1,20 @@
+var webpack = require('webpack'); //import the webpack utilities
+
 module.exports = {
-    entry: './app/app.jsx', //entry point for the application
+    entry:[
+      'jquery/dist/jquery.min.js',
+      'foundation-sites/dist/foundation.min.js',
+      './app/app.jsx'
+    ], //entry point for the application
+    external: {
+      jquery: 'jQuery'
+    }, // variable names that external files may be using to access modules by.
+    plugins:[
+      new webpack.ProvidePlugin({
+        '$':'jquery',
+        'jQuery':'jquery'
+      }) // variable names that internal files may be using to access modules by.
+    ],
     output: {
         path: __dirname,       //in node.js, __dirname identifies the current folder (Hello React)
         filename: './public/bundle.js' //relative path to the output file. This file is auto-generated
