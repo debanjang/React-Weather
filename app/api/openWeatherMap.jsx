@@ -10,14 +10,22 @@ module.exports = {
     var url = `${OPEN_WEATHER_MAP_URL_1}q=${encodedLocation}&${OPEN_WEATHER_MAP_URL_2}`;
 
     //Step 2: Make the API call
-    return axios.get(url).then(function(resp){
-      if(resp.data.list.length>0){
-        return resp.data.list[0].main.temp;
-      }else{
-        throw new Error("No Such City Found");
-      }
-    },function(resp){
-        throw new Error(resp.data.message);
-    });
+    return axios.get(url).then(function(resp){ //we are going to chain this promise by including the return statement
+                    console.log("resp in then: "+resp);
+                    if(resp.data.cod=='200' && resp.status==200){
+                        if(resp.data.list.length>0){ //handle the empty response case
+                            return resp.data.list[0].main.temp;
+                        }else{
+                            throw new Error("No Such City Found");
+                        }
+                    }
+                }, function(resp){
+                    console.log("resp in error: "+resp);
+                    if(resp.status!=200){
+                        throw new Error(resp.data.message);
+
+                    }
+                    //throw error;
+                });
   }
 }
