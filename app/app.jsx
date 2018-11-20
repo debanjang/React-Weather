@@ -12,6 +12,9 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 //Fire up foundation
 $('document').foundation();
 
+//Load custom styles
+require('style!css!applicationStyles');
+
 // RaectDOM.render is the starting point of the application. render to the app container
 ReactDOM.render(
     <Router history={hashHistory}>

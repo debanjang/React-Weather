@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 
 // var About = React.createClass({
 //   render: function(){
@@ -12,7 +12,7 @@ var React = require('React');
 var About = props =>{
   return(
     <div>
-      <h1 className="text-center"> About </h1>
+      <h1 className="text-center page-title"> About </h1>
       <p>
         This is an application made with React that enables the user to search for
         the temperature of any city in the world.
