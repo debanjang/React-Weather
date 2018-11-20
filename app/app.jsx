@@ -13,7 +13,7 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 $('document').foundation();
 
 //Load custom styles
-require('style!css!applicationStyles');
+require('style!css!sass!applicationStyles');
 
 // RaectDOM.render is the starting point of the application. render to the app container
 ReactDOM.render(
