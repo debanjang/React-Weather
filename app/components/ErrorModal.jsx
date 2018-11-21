@@ -13,7 +13,7 @@ var ErrorModal = React.createClass({
     DOM for this modal. We do that using $modal= $(ReactDOMServer.renderToString(modalMarkup)); 
     to convert the markup into string and
     then the $(ReactDOM.findDomNode(this)).html($modal); to wrap this component in jQuery selector 
-    and use the html method of jquery to render the modal in a seperate DOM. */ 
+    and use the html method of jquery to  render the modal in a seperate DOM. */ 
     
     var {title, message} = this.props;
     
